@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto-Regular";
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+
+.outline-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 0;
+    border-spacing: 0;
+    background: #fff;
+}
+
+.outline-td {
+    align-items: center;
+    padding: 0;
+}
+
+.header-table {
+    width:602px;
+    border-collapse:collapse;
+    border:1px solid #ccc;
+    border-spacing:0;
+    text-align:left;
+}
+
+.header-td {
+    padding:40px 0 30px 0;
+    background:#296b93;
+}
+
+.inline-td {
+    padding:36px 30px 42px 30px;
+}
+
+.inline-table {
+    width:100%;
+    border-collapse:collapse;
+    border:0;
+    border-spacing:0;
+}
+
+.first-part-td{
+    padding:0 0 36px 0;
+    color:#153643;
+}
+
+h1 {
+    font-size:24px;
+    margin:0 0 20px 0;
+}
+
+.first-part-p {
+    margin:0 0 12px 0;
+    font-size:16px;
+    line-height:24px;
+}
+
+.first-part-link-p {
+    margin:0;
+    font-size:16px;
+    line-height:24px;
+}
+
+.first-part-link-a {
+    color:#ee4c50;
+    text-decoration:underline;
+}
+
+.news-td {
+    width:260px;
+    padding:0;
+    vertical-align:top;
+    color:#153643;
+}
+
+.news-image-first-p {
+    margin:0 0 25px 0;
+    font-size:16px;
+    line-height:24px;
+}
+
+.news-image {
+    height:auto;
+    display:block;
+}
+
+.news-p {
+    margin:0 0 12px 0;
+    font-size:16px;
+    line-height:24px;
+}
+.news-p-link {
+    margin:0;
+    font-size:16px;
+    line-height:24px;
+}
+
+.nbsp {
+    width:20px;
+    padding:0;
+    font-size:0;
+    line-height:0;
+}
+
+.footer {
+    padding:30px;
+    background:#ee4c50;
+}
+
+.footer-table{
+    width:100%;
+    border-collapse:collapse;
+    border:0;
+    border-spacing:0;
+    font-size:9px;
+}
+
+.footer-td{
+    padding: 0;
+    width: 50%;
+}
+
+.footer-p {
+    margin:0;
+    font-size:14px;
+    line-height:16px;
+    color:#ffffff;
+}
+
+.footer-a{
+    color:#ffffff;
+    text-decoration:underline;
+}
+
+.footer-social-table {
+    border-collapse:collapse;
+    border:0;
+    border-spacing:0;
+}
+
+.footer-social-td {
+    padding:0 0 0 10px;
+    width:38px;
+}
+
+.footer-social-a {
+    height:auto;
+    display:block;
+    border:0;
+}
