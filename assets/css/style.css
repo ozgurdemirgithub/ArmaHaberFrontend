@@ -68,3 +68,26 @@ h2{
     margin-top: 3em;
     margin-bottom: 3em;
 }
+
+
+/*CONSOLE(ADMIN PANEL) STYLING STARTS*/
+
+#sidebar-wrapper{
+    width: 550px;
+    
+}
+#sidebar-wrapper img{
+    width: 45px;
+}
+
+#sidebar-header{
+    margin-top: 1em;
+}
+
+#page-content-wrapper{
+    margin: 2em;
+}
+
+/*CONSOLE(ADMIN PANEL) STYLING ENDS*/
+
+
