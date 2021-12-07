@@ -1,12 +1,11 @@
 .ticker-wrap {
-    position: fixed;
     left: 0;
     width: 100%;
-    margin: 0 0 0 200px;
     overflow: hidden;
     height: 4rem;
     background-color: #fff;
     box-sizing: content-box;
+    border: 1px solid darkred;
 }
 
 .ticker-wrap .ticker {
@@ -14,7 +13,7 @@
     height: 4rem;
     line-height: 4rem;
     white-space: nowrap;
-    padding-right: 100%;
+    padding-right: 50%;
     box-sizing: content-box;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
