@@ -9,6 +9,7 @@
 
 .navbar-dark .navbar-toggler{
     color:black;
+    border: 1px solid black;
 }
 
 .navbar-light .navbar-nav .nav-link {
