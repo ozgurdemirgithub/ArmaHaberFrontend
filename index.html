@@ -28,116 +28,103 @@
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/breakingNews.css">
 
 
 </head>
 
 <body>
 
-    <div class="containerfluid ">
-        <div class="container-md">
-            <header class="top-header">
-                <nav class="navbar navbar-expand-lg navbar-light ">
-                    <img src="assets/images/armalogo.jpg" alt="Arma Haber Logo">
-                    <a class="navbar-brand" href="#">Arma Group</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav me-auto mb-3 mb-lg-0 "></ul>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-primary" type="submit">Search</button>
-                        </form>
-                    </div>
-                </nav>
-            </header>
-        </div>
-    </div>
-    <hr id="nav-divider">
-    <div id="nav-backgr">
-        <div class="container-fluid">
-            <nav class="navbar navbar-expand-lg navbar-light" id="second-nav" style="background-color: darkred">
-                <div class="container-fluid">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav mb-3 mb-lg-0 ">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Haber</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Son Dakika</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Spor</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Siyaset</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Magazin</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Sanat</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Mutfak</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Seyahat</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Diğer
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <div class="header-content">
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="d-flex justify-content-between align-items-center breaking-news bg-white">
-                        <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center py-2 text-white px-1 news"
-                            style="background-color: darkred">
-                            <span class="d-flex align-items-center">&nbsp;Son Dakika</span></div>
-                        <marquee class="news-scroll" behavior="scroll" direction="left" onmouseover="this.stop();"
-                            onmouseout="this.start();"> <a href="#" style="text-decoration: none; color: black;">İtalya
-                                Serie A'nın 16. haftasında Atalanta,
-                                deplasmanda Napoli'yi 3-2 yendi. Geri dönüşlerin damga vurduğu maçta milli futbolcumuz
-                                Merih Demiral, attığı golle skora 2-2'lik dengeyi sağladı ve konuk ekipte geri dönüşün
-                                fitilini yakan isim oldu. </a> <span>•</span>
-                            <a href="#" style="text-decoration: none; color: black;">Son dakika: Mersin Valiliği:
-                                CHP'nin Mersin'deki mitingine yaklaşık 21 bin 500
-                                kişi katıldı, miting olaysız şekilde tamamlandı. </a> <span>•</span> <a href="#"
-                                style="text-decoration: none; color: black;">Tunceli'de Jandarma Astsubay Üstçavuş Celil
-                                Mutlu'nun şehit olduğu ve 3
-                                teröristin etkisiz hale getirildiği operasyonun devamında mağarada sıkıştırılan 6
-                                terörist daha etkisiz hale getirildi. </a> </marquee>
-                    </div>
-                </div>
+
+    <navbar>
+        <div class="containerfluid ">
+            <div class="container-md">
+                <header class="top-header">
+                    <nav class="navbar navbar-expand-lg navbar-light ">
+                        <img src="assets/images/armalogo.jpg" alt="Arma Haber Logo">
+                        <a class="navbar-brand" href="#">Arma Group</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav me-auto mb-3 mb-lg-0 "></ul>
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-primary" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </nav>
+                </header>
             </div>
         </div>
-    </div>
+        <hr id="nav-divider">
+        <div id="nav-backgr">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg navbar-light" id="second-nav" style="background-color: darkred">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                            <ul class="navbar-nav mb-3 mb-lg-0 ">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">Haber</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">Son Dakika</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">Spor</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Siyaset</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Magazin</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Sanat</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Mutfak</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Seyahat</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Diğer
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                        <li><a class="dropdown-item" href="#">Action</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </navbar>
+    <section>
+        <div class="ticker-wrap">
+            <div class="ticker">
+                <div class="ticker__item">Haber başlığı</div>
+                <div class="ticker__item">Haberler son dakika sizinle</div>
+                <div class="ticker__item">Son dakika</div>
+                <div class="ticker__item">Yapıyoruz bu sporu </div>
+            </div>
+        </div> <br><br><br>
+    </section>
     <section id="content-display">
-        <hr>
         <div class="homepage-contents">
             <div class="container-md">
                 <div id="content-holder">
@@ -150,7 +137,8 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
                                         <p class="card-text">This is a longer card with supporting text below as a
-                                            natural lead-in to additional content. This content is a little bit longer.
+                                            natural lead-in to additional content. This content is a little bit
+                                            longer.
                                         </p>
                                     </div>
                                 </div>
@@ -180,7 +168,8 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
                                         <p class="card-text">This is a longer card with supporting text below as a
-                                            natural lead-in to additional content. This content is a little bit longer.
+                                            natural lead-in to additional content. This content is a little bit
+                                            longer.
                                         </p>
                                     </div>
                                 </div>
@@ -191,7 +180,8 @@
                                     <div class="card-body">
                                         <h5 class="card-title">Card title</h5>
                                         <p class="card-text">This is a longer card with supporting text below as a
-                                            natural lead-in to additional content. This content is a little bit longer.
+                                            natural lead-in to additional content. This content is a little bit
+                                            longer.
                                         </p>
                                     </div>
                                 </div>
@@ -325,8 +315,10 @@
                 <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
                     <h5 class="text-uppercase">ARMA HABER</h5>
 
-                    <p>Arma Haber, Global dünyaya bir tık kadar yakınsınız. Anlık son dakika haberleri, en son haberler,
-                        gazete manşetleri, köşe yazarları, namaz vakitleri, yerel haberler, siyaset, spor, ekonomi ve
+                    <p>Arma Haber, Global dünyaya bir tık kadar yakınsınız. Anlık son dakika haberleri, en son
+                        haberler,
+                        gazete manşetleri, köşe yazarları, namaz vakitleri, yerel haberler, siyaset, spor, ekonomi
+                        ve
                         daha fazlası Arma Haber'de.
                     </p>
                 </div>
