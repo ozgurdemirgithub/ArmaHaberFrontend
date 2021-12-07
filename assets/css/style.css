@@ -15,6 +15,12 @@
     src: url("../fonts/Roboto/Roboto-Regular.ttf");
 }
 
+/*BODY HOLDER DIV CONTAINER*/
+.body-holder{
+    margin:0;
+    padding: 0;
+}
+
 h1 {
     color: #1982C4;
 }
