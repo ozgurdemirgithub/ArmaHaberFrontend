@@ -2,6 +2,7 @@
     --blue: #1e90ff;
     --white: #ffffff;
 }
+
 /*COLOR VARIABLES WILL BE INCREASED*/
 * {
     margin: 0;
@@ -13,81 +14,36 @@
     font-family: "Roboto-Regular";
     src: url("../fonts/Roboto/Roboto-Regular.ttf");
 }
-h1{
+
+h1 {
     color: #1982C4;
 }
-h2{
+
+h2 {
     color: #1982C4;
+}
+
+.container-md {
+    max-width: 1060px;
 }
 
 /*centering elements in header tag (easy-way will be modified)*/
-.top-header{
-    margin-left: 5em;
-    margin-right: 5em;
-}
-.header-content{
-    text-align: center;
-}
 
-/*NAVBAR SETTINGS*/
-.navbar-expand-lg .navbar-collapse{
-    justify-content: center;
-}
-.navbar-expand-lg .navbar-collapse ul li{
-    margin-right: 2em;
-}
-.navbar-light .navbar-nav .nav-link{
-    color: white;
-}
-#nav-backgr{
-    background-color: darkred;
-}
-
-.navbar.center .navbar-inner .nav {
-    display:inline-block;
-    float: none;
-}
-.navbar{
-    background-color: #fff;
-    text-align: left; 
-}
-.navbar img {
-    width: 46px;
-    height: 46px;
-    border-radius: 40%;
-    overflow: hidden;
-}
 /*HR TAG BETWEEN NAVBARS*/
-#nav-divider{
+#nav-divider {
     margin: 0px;
     color: black;
 }
-/*SLIDER SETTINGS*/ 
+
+/*SLIDER SETTINGS*/
 /*THIS MARGIN VALUES SHOULD BE STORED AND USED AS VARIABLES FOR ROW-COLUMNS*/
-.container-careousel{
+.container-careousel {
     margin-top: 3em;
     margin-bottom: 3em;
 }
+/*NEW CARDS*/
 
-
-/*CONSOLE(ADMIN PANEL) STYLING STARTS*/
-
-#sidebar-wrapper{
-    width: 550px;
-    
+#sdk-seperator{
+    margin-top: 0;
+    margin-bottom: 30px;
 }
-#sidebar-wrapper img{
-    width: 45px;
-}
-
-#sidebar-header{
-    margin-top: 1em;
-}
-
-#page-content-wrapper{
-    margin: 2em;
-}
-
-/*CONSOLE(ADMIN PANEL) STYLING ENDS*/
-
-
