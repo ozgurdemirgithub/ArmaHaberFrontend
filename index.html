@@ -23,7 +23,7 @@
     <meta property="twitter:image" src="/assets/images/armalogo.jpg">
 
     <title>ARMA HABER</title>
-
+    <script src="/assets/js/infinite-scroll.pkgd.min.js"></script>
     <!-- OUR OWN CSS LINKS -->
 
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
@@ -39,133 +39,657 @@
 
 <body>
     <div class="container-fluid body-holder">
-        <div class="containerfluid ">
-            <header class="top-header">
-
-                <nav id="top-bar" class="navbar navbar-expand-lg navbar-dark ">
-                    <img src="assets/images/armalogo.jpg" alt="Arma Haber Logo">
-                    <a class="navbar-brand" href="index.html">Arma Group</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul class="navbar-nav me-auto mb-3 mb-lg-0 "></ul>
-                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul class="navbar-nav mb-3 mb-lg-0 ">
-                                <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="#">Gündem</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="#">Yazarlar</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="#">Yaşam</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Hava Durumu</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Haber Bul..." aria-label="Search">
-                            <button class="btn btn-outline-primary" type="submit"><i class="fas fa-search"></i></button>
-                        </form>
-                    </div>
-                </nav>
-            </header>
-
-        </div>
-        <hr id="nav-divider">
-        <div id="nav-backgr">
-            <div class="container-fluid">
-                <nav class="navbar navbar-expand-lg navbar-light" id="second-nav" style="background-color: darkred">
-                    <div class="container-fluid">
+        <header class="top-header">
+        <nav>
+            <div class="containerfluid ">
+                    <nav id="top-bar" class="navbar navbar-expand-lg navbar-dark ">
+                        <img src="assets/images/armalogo.jpg" alt="Arma Haber Logo">
+                        <a class="navbar-brand" href="index.html">Arma Group</a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
                             aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                            <ul class="navbar-nav mb-3 mb-lg-0 ">
-                                <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="#">Haber</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="#">Son Dakika</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="#">Spor</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Siyaset</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Magazin</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Sanat</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Mutfak</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Seyahat</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Sanat</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Mutfak</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
-                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Diğer
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                            <ul class="navbar-nav me-auto mb-3 mb-lg-0 "></ul>
+                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                <ul class="navbar-nav mb-3 mb-lg-0 ">
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="#">Gündem</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="#">Yazarlar</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="#">Yaşam</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Hava Durumu</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <form class="d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Haber Bul..."
+                                    aria-label="Search">
+                                <button class="btn btn-outline-primary" type="submit"><i
+                                        class="fas fa-search"></i></button>
+                            </form>
                         </div>
-                    </div>
-                </nav>
+                    </nav>
+                
+
             </div>
-        </div>
-        <section>
+            <hr id="nav-divider">
+            <div id="nav-backgr">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-lg navbar-light" id="second-nav" style="background-color: darkred">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                <ul class="navbar-nav mb-3 mb-lg-0 ">
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="#">Haber</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="#">Son Dakika</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" aria-current="page" href="#">Spor</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Siyaset</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Magazin</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Sanat</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Mutfak</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Seyahat</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Sanat</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Mutfak</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Diğer
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+
             <div class="ticker-wrap">
                 <div class="ticker">
                     <a class="ticker__item" href="#">Son Dakika: Asgari ücrette zam pazarlığı devam ediyor!</a>
                     <a class="ticker__item" href="#">Son dakika: Cumhurbaşkanı Erdoğan Katar'la 12 anlaşmaya imza
                         attı</a>
-                    <a class="ticker__item" href="#">Galatasaray'da maç öncesi Fatih Terim ve Burak Elmas gerginliği</a>
+                    <a class="ticker__item" href="#">Galatasaray'da maç öncesi Fatih Terim ve Burak Elmas
+                        gerginliği</a>
                     <a class="ticker__item" href="#">Meteoroloji'nin uyarılarının ardından fırtına Antalya'yı vurdu:
                         Dalga boyu 3
                         metreyi aştı, köprü çöktü </a>
-                    <a class="ticker__item" href="#">Son dakika ekonomi haberleri! Ekonomi dünyasının güncel gelişmeleri
+                    <a class="ticker__item" href="#">Son dakika ekonomi haberleri! Ekonomi dünyasının güncel
+                        gelişmeleri
                     </a>
                     <a class="ticker__item" href="#">Mak Danışmanlık'tan Kulat: AK Parti ilk defa yüzde 30'un altını
                         gördü </a>
                     <a class="ticker__item" href="#">Memur zammında masadaki iki senaryo </a>
-                    <a class="ticker__item" href="#">İnşaat işçisinin paylaştığı video gündem oldu! Tuğla ellerinde toza
+                    <a class="ticker__item" href="#">İnşaat işçisinin paylaştığı video gündem oldu! Tuğla ellerinde
+                        toza
                         döndü
                     </a>
-                    <a class="ticker__item" href="#">Eski uzman çavuş, eski silah arkadaşlarıyla çatıştı! Jandarmalar
+                    <a class="ticker__item" href="#">Eski uzman çavuş, eski silah arkadaşlarıyla çatıştı!
+                        Jandarmalar
                         eşini ondan
                         korumaya çalışıyordu </a>
                 </div>
             </div>
-        </section>
-        <hr id="sdk-seperator">
-        <section id="content-display">
+            <hr id="sdk-seperator">
+        </nav></header>
+        <section id="card-group1">
+            <div class="container-md">
+                <div id="content-holder">
+                    <div class="card">
+                        <div class="card-img" style="background-image: url(assets/images/001.jpg);">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <a href="#!">Devamını Oku</a>
+                                </div>
+                            </div>
+                        </div>
 
-            <div class="homepage-contents">
+                        <div class="card-content">
+                            <a href="#!">
+                                <h2>Vladimir Putin G20 Zirvesinde Liderlerle Görüştü</h2>
+                                <p>Lorem ipsum dolor sit ametsekhf lskhfe consectetur, lorem ipsum dolor</p>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-img" style="background-image: url(assets/images/002.jpg);">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <a href="#!">Devamını Oku</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <a href="#!">
+                                <h2>Donald Trump Yeni Dönem Başkanlık Seçimlerine Hazırlanıyor</h2>
+                                <p>Lorem ipsum dolor sit amet LOremklefsjlkejssadasdflkjflksjhlfeshfjlesh flesh
+                                    lsehf elsfh lsekhf lskhfe consectetur, lorem ipsum dolor</p>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-img" style="background-image: url(assets/images/003.jpg);">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <a href="#!">Devamını Oku</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <a href="#!">
+                                <h2>Recep Tayyip Erdoğan: S-400'ler Türkiye'ye Getirildi Dedi</h2>
+                                <p>Lorem ipsum dolor sit amet LOremklefsjlkejssadasdflkjflksjhlfeshfjlesh flesh
+                                    lsehf elsfh lsekhf lskhfe consectetur, lorem ipsum dolor</p>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-img" style="background-image: url(assets/images/004.jpg);">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <a href="#!">Devamını Oku</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <a href="#!">
+                                <h2>Angela Merkel Titreme Nöbetleriyle Gündeme Geldi</h2>
+                                <p>Lorem ipsum dolor sit amet LOremklefsjlkejssadasdflkjflksjhlfeshfjlesh flesh
+                                    lsehf elsfh lsekhf lskhfe consectetur, lorem ipsum dolor</p>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="container-careousel">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#carouselExampleCaptions"
+                                            data-bs-slide-to="0" class="active" aria-current="true"
+                                            aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions"
+                                            data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#carouselExampleCaptions"
+                                            data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="assets/images/day.jpg" class="d-block w-100" alt="Haber Görseli">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>First slide label</h5>
+                                                <p>Some representative placeholder content for the first slide.</p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="assets/images/day.jpg" class="d-block w-100" alt="Haber Görseli">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>Second slide label</h5>
+                                                <p>Some representative placeholder content for the second slide.</p>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="assets/images/day.jpg" class="d-block w-100" alt="Haber Görseli">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h5>Third slide label</h5>
+                                                <p>Some representative placeholder content for the third slide.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button"
+                                        data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button"
+                                        data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <h2>Haber Manşet</h2>
+                                <p>BURADA REKLAM OLABİLİR <br>
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo consectetur minus
+                                    nobis sequi vero? Quis doloremque laboriosam, ipsa error omnis fugit sit at
+                                    provident eius nam possimus odit labore vitae?</p>
+
+                                <img src="assets/images/armalogo.jpg" alt="Haber Görseli">
+                                <p>Temsili Resim</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="card-group2">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="container-md">
+                        <div class="registration-right">
+                            <h2>Our News</h2>
+                            <div class="event-list">
+                                <div class="card flex-row"><img class="card-img-left img-fluid"
+                                        src="assets/images/day.jpg" />
+                                    <div class="card-body">
+                                        <h4 class="card-title h5 h4-sm"><i class="fas fa-caret-right"
+                                                aria-hidden="true"></i><span>AUG 01 2021</span><i
+                                                class="fas fa-caret-right" aria-hidden="true"></i><span>12:00 AM - 11:59
+                                                PM</span> </h4>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                            sed Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                </div>
+                                <div class="card flex-row"><img class="card-img-left img-fluid"
+                                        src="assets/images/004.jpg" />
+                                    <div class="card-body">
+                                        <h4 class="card-title h5 h4-sm"><i class="fas fa-caret-right"
+                                                aria-hidden="true"></i><span>AUG 01 2021</span><i
+                                                class="fas fa-caret-right" aria-hidden="true"></i><span>12:00 AM - 11:59
+                                                PM</span> </h4>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                            sed Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum
+                                            dolorem tempore voluptate praesentium soluta eveniet. </p>
+                                    </div>
+                                </div>
+                                <div class="card flex-row"><img class="card-img-left img-fluid"
+                                        src="assets/images/004.jpg" />
+                                    <div class="card-body">
+                                        <h4 class="card-title h5 h4-sm"><i class="fas fa-caret-right"
+                                                aria-hidden="true"></i><span>AUG 01 2021</span><i
+                                                class="fas fa-caret-right" aria-hidden="true"></i><span>12:00 AM - 11:59
+                                                PM</span> </h4>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipislorem15 lorem
+                                            lorem Lorem ipsum dolor sit amet. cing elit, sed</p>
+                                    </div>
+                                </div>
+                                <div class="card flex-row"><img class="card-img-left img-fluid"
+                                        src="assets/images/day.jpg" />
+                                    <div class="card-body">
+                                        <h4 class="card-title h5 h4-sm"><i class="fas fa-caret-right"
+                                                aria-hidden="true"></i><span>AUG 01 2021</span><i
+                                                class="fas fa-caret-right" aria-hidden="true"></i><span>12:00 AM - 11:59
+                                                PM</span> </h4>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                            sed Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                </div>
+                                <div class="card flex-row"><img class="card-img-left img-fluid"
+                                        src="assets/images/day.jpg" />
+                                    <div class="card-body">
+                                        <h4 class="card-title h5 h4-sm"><i class="fas fa-caret-right"
+                                                aria-hidden="true"></i><span>AUG 01 2021</span><i
+                                                class="fas fa-caret-right" aria-hidden="true"></i><span>12:00 AM - 11:59
+                                                PM</span> </h4>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                            sed Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                </div>
+                                <div class="card flex-row"><img class="card-img-left img-fluid"
+                                        src="assets/images/day.jpg" />
+                                    <div class="card-body">
+                                        <h4 class="card-title h5 h4-sm"><i class="fas fa-caret-right"
+                                                aria-hidden="true"></i><span>AUG 01 2021</span><i
+                                                class="fas fa-caret-right" aria-hidden="true"></i><span>12:00 AM - 11:59
+                                                PM</span> </h4>
+                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                            sed Lorem ipsum dolor sit amet.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="card-group3">
+            <div class="container-fluid">
                 <div class="container-md">
-                    <div id="content-holder">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="card">
+                                <a class="img-card" href="#">
+                                    <img src="assets/images/day.jpg" />
+                                </a>
+                                <div class="card-content">
+                                    <h4 class="card-title">
+                                        <a href="#">
+                                            Lorem ipsum dolor sit amet.
+                                        </a>
+                                    </h4>
+                                    <p class="">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde corrupti
+                                        doloribus tempora?
+                                    </p>
+                                </div>
+                                <div class="card-read-more">
+                                    <a href="#" class="btn btn-link btn-block">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="card">
+                                <a class="img-card" href="#">
+                                    <img src="assets/images/day.jpg" />
+                                </a>
+                                <div class="card-content">
+                                    <h4 class="card-title">
+                                        <a href="#">
+                                            Lorem ipsum dolor sit amet.
+                                        </a>
+                                    </h4>
+                                    <p class="">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde corrupti
+                                        doloribus tempora?
+                                    </p>
+                                </div>
+                                <div class="card-read-more">
+                                    <a href="#" class="btn btn-link btn-block">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="card">
+                                <a class="img-card" href="#">
+                                    <img src="assets/images/day.jpg" />
+                                </a>
+                                <div class="card-content">
+                                    <h4 class="card-title">
+                                        <a href="#">
+                                            Lorem ipsum dolor sit amet.
+                                        </a>
+                                    </h4>
+                                    <p class="">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde corrupti
+                                        doloribus tempora?
+                                    </p>
+                                </div>
+                                <div class="card-read-more">
+                                    <a href="#" class="btn btn-link btn-block">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="card">
+                                <a class="img-card" href="#">
+                                    <img src="assets/images/day.jpg" />
+                                </a>
+                                <div class="card-content">
+                                    <h4 class="card-title">
+                                        <a href="#">
+                                            Lorem ipsum dolor sit amet.
+                                        </a>
+                                    </h4>
+                                    <p class="">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde corrupti
+                                        doloribus tempora?
+                                    </p>
+                                </div>
+                                <div class="card-read-more">
+                                    <a href="#" class="btn btn-link btn-block">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="card">
+                                <a class="img-card" href="#">
+                                    <img src="assets/images/day.jpg" />
+                                </a>
+                                <div class="card-content">
+                                    <h4 class="card-title">
+                                        <a href="#">
+                                            Lorem ipsum dolor sit amet.
+                                        </a>
+                                    </h4>
+                                    <p class="">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde corrupti
+                                        doloribus tempora?
+                                    </p>
+                                </div>
+                                <div class="card-read-more">
+                                    <a href="#" class="btn btn-link btn-block">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="card">
+                                <a class="img-card" href="#">
+                                    <img src="assets/images/day.jpg" />
+                                </a>
+                                <div class="card-content">
+                                    <h4 class="card-title">
+                                        <a href="#">
+                                            Lorem ipsum dolor sit amet.
+                                        </a>
+                                    </h4>
+                                    <p class="">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde corrupti
+                                        doloribus tempora?
+                                    </p>
+                                </div>
+                                <div class="card-read-more">
+                                    <a href="#" class="btn btn-link btn-block">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="card">
+                                <a class="img-card" href="#">
+                                    <img src="assets/images/day.jpg" />
+                                </a>
+                                <div class="card-content">
+                                    <h4 class="card-title">
+                                        <a href="#">
+                                            Lorem ipsum dolor sit amet.
+                                        </a>
+                                    </h4>
+                                    <p class="">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde corrupti
+                                        doloribus tempora?
+                                    </p>
+                                </div>
+                                <div class="card-read-more">
+                                    <a href="#" class="btn btn-link btn-block">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="card">
+                                <a class="img-card" href="#">
+                                    <img src="assets/images/day.jpg" />
+                                </a>
+                                <div class="card-content">
+                                    <h4 class="card-title">
+                                        <a href="#">
+                                            Lorem ipsum dolor sit amet.
+                                        </a>
+                                    </h4>
+                                    <p class="">
+                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde corrupti
+                                        doloribus tempora?
+                                    </p>
+                                </div>
+                                <div class="card-read-more">
+                                    <a href="#" class="btn btn-link btn-block">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="card">
+                                <a class="img-card" href="#">
+                                    <img src="assets/images/day.jpg" />
+                                </a>
+                                <div class="card-content">
+                                    <h4 class="card-title">
+                                        <a href="#">5
+                                            Lorem ipsum dolor sit amet.
+                                        </a>
+                                    </h4>
+                                    <p class="">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum tenetur sunt ullam!
+                                    </p>
+                                </div>
+                                <div class="card-read-more">
+                                    <a href="#" class="btn btn-link btn-block">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="card-group1">
+            <div class="container-md">
+                <div id="content-holder">
+                    <div class="card">
+                        <div class="card-img" style="background-image: url(assets/images/001.jpg);">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <a href="#!">Devamını Oku</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <a href="#!">
+                                <h2>Vladimir Putin G20 Zirvesinde Liderlerle Görüştü</h2>
+                                <p>Lorem ipsum dolor sit ametsekhf lskhfe consectetur, lorem ipsum dolor</p>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-img" style="background-image: url(assets/images/002.jpg);">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <a href="#!">Devamını Oku</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <a href="#!">
+                                <h2>Donald Trump Yeni Dönem Başkanlık Seçimlerine Hazırlanıyor</h2>
+                                <p>Lorem ipsum dolor sit amet LOremklefsjlkejssadasdflkjflksjhlfeshfjlesh flesh
+                                    lsehf elsfh lsekhf lskhfe consectetur, lorem ipsum dolor</p>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-img" style="background-image: url(assets/images/003.jpg);">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <a href="#!">Devamını Oku</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <a href="#!">
+                                <h2>Recep Tayyip Erdoğan: S-400'ler Türkiye'ye Getirildi Dedi</h2>
+                                <p>Lorem ipsum dolor sit amet LOremklefsjlkejssadasdflkjflksjhlfeshfjlesh flesh
+                                    lsehf elsfh lsekhf lskhfe consectetur, lorem ipsum dolor</p>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-img" style="background-image: url(assets/images/004.jpg);">
+                            <div class="overlay">
+                                <div class="overlay-content">
+                                    <a href="#!">Devamını Oku</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <a href="#!">
+                                <h2>Angela Merkel Titreme Nöbetleriyle Gündeme Geldi</h2>
+                                <p>Lorem ipsum dolor sit amet LOremklefsjlkejssadasdflkjflksjhlfeshfjlesh flesh
+                                    lsehf elsfh lsekhf lskhfe consectetur, lorem ipsum dolor</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="card-group4">
+        </section>
+        <section id="deneme-tahtasi">
+            <div class="container">
+                <div class="article-feed"
+                    data-infinite-scroll='{ "path": ".pagination__next", "append": ".article", "status": ".scroller-status", "hideNav": ".pagination" }'>
+
+                    <div class="article">
                         <div class="card">
                             <div class="card-img" style="background-image: url(assets/images/001.jpg);">
                                 <div class="overlay">
@@ -174,7 +698,7 @@
                                     </div>
                                 </div>
                             </div>
-    
+
                             <div class="card-content">
                                 <a href="#!">
                                     <h2>Vladimir Putin G20 Zirvesinde Liderlerle Görüştü</h2>
@@ -182,349 +706,94 @@
                                 </a>
                             </div>
                         </div>
-    
-    
-                        <div class="card">
-                            <div class="card-img" style="background-image: url(assets/images/002.jpg);">
-                                <div class="overlay">
-                                    <div class="overlay-content">
-                                        <a href="#!">Devamını Oku</a>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="card-content">
-                                <a href="#!">
-                                    <h2>Donald Trump Yeni Dönem Başkanlık Seçimlerine Hazırlanıyor</h2>
-                                    <p>Lorem ipsum dolor sit amet LOremklefsjlkejssadasdflkjflksjhlfeshfjlesh flesh lsehf elsfh lsekhf lskhfe consectetur, lorem ipsum dolor</p>
-                                </a>
-                            </div>
-                        </div>
-    
-    
-                        <div class="card">
-                            <div class="card-img" style="background-image: url(assets/images/003.jpg);">
-                                <div class="overlay">
-                                    <div class="overlay-content">
-                                        <a href="#!">Devamını Oku</a>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="card-content">
-                                <a href="#!">
-                                    <h2>Recep Tayyip Erdoğan: S-400'ler Türkiye'ye Getirildi Dedi</h2>
-                                    <p>Lorem ipsum dolor sit amet LOremklefsjlkejssadasdflkjflksjhlfeshfjlesh flesh lsehf elsfh lsekhf lskhfe consectetur, lorem ipsum dolor</p>
-                                </a>
-                            </div>
-                        </div>
-    
-    
-                        <div class="card">
-                            <div class="card-img" style="background-image: url(assets/images/004.jpg);">
-                                <div class="overlay">
-                                    <div class="overlay-content">
-                                        <a href="#!">Devamını Oku</a>
-                                    </div>
-                                </div>
-                            </div>
-    
-                            <div class="card-content">
-                                <a href="#!">
-                                    <h2>Angela Merkel Titreme Nöbetleriyle Gündeme Geldi</h2>
-                                    <p>Lorem ipsum dolor sit amet LOremklefsjlkejssadasdflkjflksjhlfeshfjlesh flesh lsehf elsfh lsekhf lskhfe consectetur, lorem ipsum dolor</p>
-                                </a>
-                            </div>
-                        </div>
-
-
-
-                        <div class="container-careousel">
-                            <div class="row">
-                                <div class="col-md-7">
-                                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-                                        <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#carouselExampleCaptions"
-                                                data-bs-slide-to="0" class="active" aria-current="true"
-                                                aria-label="Slide 1"></button>
-                                            <button type="button" data-bs-target="#carouselExampleCaptions"
-                                                data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                            <button type="button" data-bs-target="#carouselExampleCaptions"
-                                                data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                        </div>
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img src="assets/images/day.jpg" class="d-block w-100"
-                                                    alt="Haber Görseli">
-                                                <div class="carousel-caption d-none d-md-block">
-                                                    <h5>First slide label</h5>
-                                                    <p>Some representative placeholder content for the first slide.</p>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="assets/images/day.jpg" class="d-block w-100"
-                                                    alt="Haber Görseli">
-                                                <div class="carousel-caption d-none d-md-block">
-                                                    <h5>Second slide label</h5>
-                                                    <p>Some representative placeholder content for the second slide.</p>
-                                                </div>
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="assets/images/day.jpg" class="d-block w-100"
-                                                    alt="Haber Görseli">
-                                                <div class="carousel-caption d-none d-md-block">
-                                                    <h5>Third slide label</h5>
-                                                    <p>Some representative placeholder content for the third slide.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <button class="carousel-control-prev" type="button"
-                                            data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Previous</span>
-                                        </button>
-                                        <button class="carousel-control-next" type="button"
-                                            data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Next</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4">
-                                    <h2>Haber Manşet</h2>
-                                    <p>BURADA REKLAM OLABİLİR <br>
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo consectetur minus
-                                        nobis sequi vero? Quis doloremque laboriosam, ipsa error omnis fugit sit at
-                                        provident eius nam possimus odit labore vitae?</p>
-
-                                    <img src="assets/images/armalogo.jpg" alt="Haber Görseli">
-                                    <p>Temsili Resim</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="content">
-
-                            <div class="card">
-                                <div class="card-img"
-                                    style="background-image:url(https://images.unsplash.com/photo-1491374812364-00028bbe7d2f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a22e4862c36c552e726815949fbcb41a&auto=format&fit=crop&w=500&q=60);">
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <a href="#!">Devamını Oku</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card-content">
-                                    <a href="#!">
-                                        <h2>Title</h2>
-                                        <p>Lorem ipsum dolor sit amet LOremklefsjlkejssadasdflkjflksjhlfeshfjlesh flesh
-                                            lsehf elsfh lsekhf lskhfe consectetur, lorem ipsum dolor</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-img"
-                                    style="background-image:url(https://images.unsplash.com/photo-1491374812364-00028bbe7d2f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a22e4862c36c552e726815949fbcb41a&auto=format&fit=crop&w=500&q=60);">
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <a href="#!">Devamını Oku</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card-content">
-                                    <a href="#!">
-                                        <h2>Title</h2>
-                                        <p>Lorem ipsum dolor sit amet LOremklefsjlkejssadasdflkjflksjhlfeshfjlesh flesh
-                                            lsehf elsfh lsekhf lskhfe consectetur, lorem ipsum dolor</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-img"
-                                    style="background-image:url(https://images.unsplash.com/photo-1491374812364-00028bbe7d2f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a22e4862c36c552e726815949fbcb41a&auto=format&fit=crop&w=500&q=60);">
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <a href="#!">Devamını Oku</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card-content">
-                                    <a href="#!">
-                                        <h2>Title</h2>
-                                        <p>Lorem ipsum dolor sit amet LOremklefsjlkejssadasdflkjflksjhlfeshfjlesh flesh
-                                            lsehf elsfh lsekhf lskhfe consectetur, lorem ipsum dolor</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-img"
-                                    style="background-image:url(https://images.unsplash.com/photo-1491374812364-00028bbe7d2f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a22e4862c36c552e726815949fbcb41a&auto=format&fit=crop&w=500&q=60);">
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <a href="#!">Devamını Oku</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card-content">
-                                    <a href="#!">
-                                        <h2>Title</h2>
-                                        <p>Lorem ipsum dolor sit amet LOremklefsjlkejssadasdflkjflksjhlfeshfjlesh flesh
-                                            lsehf elsfh lsekhf lskhfe consectetur, lorem ipsum dolor</p>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="card">
-                                <div class="card-img"
-                                    style="background-image:url(https://images.unsplash.com/photo-1519176336903-04be58a477d2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eda05ddcb3154f39fd8ce88fdd44f531&auto=format&fit=crop&w=500&q=60);">
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <a href="#!">Devamını Oku</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card-content">
-                                    <a href="#!">
-                                        <h2>Title</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur, lorem ipsum dolor</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-img"
-                                    style="background-image:url(https://images.unsplash.com/photo-1519176336903-04be58a477d2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eda05ddcb3154f39fd8ce88fdd44f531&auto=format&fit=crop&w=500&q=60);">
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <a href="#!">Devamını Oku</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card-content">
-                                    <a href="#!">
-                                        <h2>Title</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur, lorem ipsum dolor</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-img"
-                                    style="background-image:url(https://images.unsplash.com/photo-1519176336903-04be58a477d2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eda05ddcb3154f39fd8ce88fdd44f531&auto=format&fit=crop&w=500&q=60);">
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <a href="#!">Devamını Oku</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card-content">
-                                    <a href="#!">
-                                        <h2>Title</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur, lorem ipsum dolor</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-img"
-                                    style="background-image:url(https://images.unsplash.com/photo-1519176336903-04be58a477d2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eda05ddcb3154f39fd8ce88fdd44f531&auto=format&fit=crop&w=500&q=60);">
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <a href="#!">Devamını Oku</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card-content">
-                                    <a href="#!">
-                                        <h2>Title</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur, lorem ipsum dolor</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-img"
-                                    style="background-image:url(https://images.unsplash.com/photo-1519176336903-04be58a477d2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eda05ddcb3154f39fd8ce88fdd44f531&auto=format&fit=crop&w=500&q=60);">
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <a href="#!">Devamını Oku</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card-content">
-                                    <a href="#!">
-                                        <h2>Title</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur, lorem ipsum dolor</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-img"
-                                    style="background-image:url(https://images.unsplash.com/photo-1519176336903-04be58a477d2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eda05ddcb3154f39fd8ce88fdd44f531&auto=format&fit=crop&w=500&q=60);">
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <a href="#!">Devamını Oku</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card-content">
-                                    <a href="#!">
-                                        <h2>Title</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur, lorem ipsum dolor</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-img"
-                                    style="background-image:url(https://images.unsplash.com/photo-1519176336903-04be58a477d2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eda05ddcb3154f39fd8ce88fdd44f531&auto=format&fit=crop&w=500&q=60);">
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <a href="#!">Devamını Oku</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card-content">
-                                    <a href="#!">
-                                        <h2>Title</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur, lorem ipsum dolor</p>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-img"
-                                    style="background-image:url(https://images.unsplash.com/photo-1519176336903-04be58a477d2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eda05ddcb3154f39fd8ce88fdd44f531&auto=format&fit=crop&w=500&q=60);">
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <a href="#!">Devamını Oku</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="card-content">
-                                    <a href="#!">
-                                        <h2>Title</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur, lorem ipsum dolor</p>
-                                    </a>
-                                </div>
-                            </div>
-
-
-                        </div>
 
                     </div>
+
+                    <article class="article">
+                        <h2 class="article__title" id="2a-rgb-schemes-logo">2a - RGB Schemes logo</h2>
+
+                        <div class="twitter-tweet twitter-tweet-rendered"
+                            style="display: flex; max-width: 550px; width: 100%; margin-top: 10px; margin-bottom: 10px;">
+                            <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true"
+                                allowfullscreen="true" class=""
+                                style="position: static; visibility: visible; width: 550px; height: 636px; display: block; flex-grow: 1;"
+                                title="Twitter Tweet"
+                                src="https://platform.twitter.com/embed/Tweet.html?dnt=false&amp;embedId=twitter-widget-0&amp;features=eyJ0ZndfZXhwZXJpbWVudHNfY29va2llX2V4cGlyYXRpb24iOnsiYnVja2V0IjoxMjA5NjAwLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2hvcml6b25fdHdlZXRfZW1iZWRfOTU1NSI6eyJidWNrZXQiOiJodGUiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3NwYWNlX2NhcmQiOnsiYnVja2V0Ijoib2ZmIiwidmVyc2lvbiI6bnVsbH19&amp;frame=false&amp;hideCard=false&amp;hideThread=false&amp;id=804705433739022338&amp;lang=en&amp;origin=https%3A%2F%2Finfinite-scroll.com%2Fdemo%2Ffull-page%2F&amp;sessionId=378cd503c067de8cc8d6c026aeb857ec4cec3279&amp;siteScreenName=metafizzyco&amp;theme=light&amp;widgetsVersion=9fd78d5%3A1638479056965&amp;width=550px"
+                                data-tweet-id="804705433739022338"></iframe></div>
+                        <script async="" src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+                    </article>
+                    <article class="article">
+                        <h2 id="2b-masonry-gets-horizontalorder">2b - Masonry gets horizontalOrder</h2>
+
+                        <p>I've added Masonry's first new layout feature in years. <a
+                                href="https://masonry.desandro.com/options.html#horizontalorder"><code>horizontalOrder</code>
+                                for Masonry</a> and <a
+                                href="https://isotope.metafizzy.co/layout-modes/masonry.html#horizontalorder">Isotope</a>
+                            will position items in a Masonry staggered layout, but maintain left-to-right order.
+                            Previously,
+                            Masonry would discard horizontal order and position items in the closest position to the
+                            top.
+                            While the first row would have horizontal order: 1, 2, 3; subsequent rows would break the
+                            order:
+                            5, 4, 6 ... 9, 7, 8.</p>
+                        <p><img src="https://i.imgur.com/WQVtdGp.png" alt="Masonry and left-to-right order"></p>
+                        <p><a href="https://codepen.io/desandro/pen/dWVqmx">Try out the demo on CodePen</a>.</p>
+                        <p></p>
+                        <div class="cp_embed_wrapper"><iframe allowfullscreen="true" allowpaymentrequest="true"
+                                allowtransparency="true" class="cp_embed_iframe " frameborder="0" height="360"
+                                width="100%" name="cp_embed_1" scrolling="no"
+                                src="https://codepen.io/desandro/embed/dWVqmx?height=360&amp;theme-id=20058&amp;slug-hash=dWVqmx&amp;default-tab=result&amp;user=desandro&amp;embed-version=2&amp;pen-title=Masonry%20%26%20Isotope%20horizontalOrder&amp;name=cp_embed_1"
+                                style="width: 100%; overflow:hidden; display:block;"
+                                title="Masonry &amp; Isotope horizontalOrder" loading="lazy"
+                                id="cp_embed_dWVqmx"></iframe>
+                        </div>
+                        <p></p>
+                        <script async="" src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+                        <p>This feature has been <a href="https://github.com/desandro/masonry/issues/873">hotly
+                                requested
+                                over a long time</a>. For a while, I felt a horizontalOrder feature went against the
+                            purpose
+                            of Masonry. Masonry is supposed to mess up the horizontal order — that's what makes it
+                            Masonry.
+                            But recently, I've started relenting over these philosophical stances. If hundreds of people
+                            are
+                            asking for the same thing, maybe I shouldn't be so stubborn.</p>
+
+                    </article>
+                    <article class="article">
+                        <h2 id="2c-every-vector-2016">2c - Every vector 2016</h2>
+
+                        <p><a href="https://i.imgur.com/mXaAcNO.png"><img src="https://i.imgur.com/mXaAcNO.png"
+                                    alt="Metafizzy every vector 2016"></a></p>
+                        <p><a
+                                href="http://www.draplin.com/1998/01/ddc100_pretty_much_everything_up_to_oct_11_2013_poster.html">Draplin-esque</a>
+                            collage. Every vector made in 2016. Accepted, rejected, upcoming, or unused.</p>
+
+                    </article>
+
                 </div>
+                <div class="scroller-status" style="display: none;">
+                    <div class="loader-ellips infinite-scroll-request" style="display: none;">
+                        <span class="loader-ellips__dot"></span>
+                        <span class="loader-ellips__dot"></span>
+                        <span class="loader-ellips__dot"></span>
+                        <span class="loader-ellips__dot"></span>
+                    </div>
+                    <p class="scroller-status__message infinite-scroll-last" style="display: none;">End of content</p>
+                    <p class="scroller-status__message infinite-scroll-error" style="display: none;">No more pages to
+                        load
+                    </p>
+                </div>
+                <p class="pagination" style="display: none;">
+                    <a class="pagination__next" href="page2.html">Next page</a>
+                </p>
+
+                <p><button class="view-more-button">View more</button></p>
             </div>
         </section>
-
-
         <!-- Footer -->
-
         <footer class="bg-dark text-white text-center text-md-start mt-5">
             <div class="container p-4">
                 <div class="row">
@@ -554,7 +823,8 @@
 
                         <p>Arma Haber, Global dünyaya bir tık kadar yakınsınız. Anlık son dakika haberleri, en son
                             haberler,
-                            gazete manşetleri, köşe yazarları, namaz vakitleri, yerel haberler, siyaset, spor, ekonomi
+                            gazete manşetleri, köşe yazarları, namaz vakitleri, yerel haberler, siyaset, spor,
+                            ekonomi
                             ve
                             daha fazlası Arma Haber'de.
                         </p>
@@ -594,19 +864,20 @@
                         </ul>
                     </div>
                 </div>
-                
                 <section class="mt-4">
                     <div class="row d-flex justify-content-center">
                         <div class="col-auto" style="font-size: 0.7rem;">
-                            <a href="#facebook" style="color: white;"><i class="fab fa-facebook fa-2x"></i></a> &nbsp;
+                            <a href="#facebook" style="color: white;"><i class="fab fa-facebook fa-2x"></i></a>
+                            &nbsp;
                             <a href="#twitter" style="color: white"><i class="fab fa-twitter fa-2x"></i></a> &nbsp;
-                            <a href="#instagram" style="color: white"><i class="fab fa-instagram fa-2x"></i></a> &nbsp;
+                            <a href="#instagram" style="color: white"><i class="fab fa-instagram fa-2x"></i></a>
+                            &nbsp;
                             <a href="#google" style="color: white"><i class="fab fa-google fa-2x"></i></a> &nbsp;
                             <a href="#apple" style="color: white"><i class="fab fa-apple fa-2x"></i></a> &nbsp;
                             <a href="#linkedin" style="color: white"><i class="fab fa-linkedin fa-2x"></i></a>
                         </div>
                     </div>
-            </section>
+                </section>
             </div>
 
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
@@ -614,14 +885,13 @@
                 <a class="text-white" href="#">armahaber.com</a>
             </div>
         </footer>
-
         <!-- SCRIPT FILES -->
-        <script src="/assets/js/bootstrap.bundle.min.js"></script>
-        <script src="/assets/js/bootstrap.min.js"></script>
-        <script src="/assets/js/infinite-scroll.pkgd.min.js"></script>
-        <script src="/assets/fontawesome/js/all.js"></script>
-
     </div>
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/infinite-scroll.pkgd.min.js"></script>
+    <script src="/assets/fontawesome/js/all.js"></script>
+    <script src="/assets/js/script.js"></script>
 </body>
 
 </html>
